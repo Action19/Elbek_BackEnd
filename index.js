@@ -8,10 +8,15 @@ const conn = require("./service/connectDB");
 // require('./service/connectDB')();
 
 conn();
-app.use(cors({
-    origin: "https://infcourses.netlify.app",
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://infcourses.netlify.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({extended: true}))
 app.use(express.json());
 
