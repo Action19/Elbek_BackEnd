@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 module.exports =  function () {
     try {
         mongoose.set('strictQuery', false);
-        mongoose.connect('mongodb://localhost:27017/Elbek');
+        mongoose.connect('mongodb+srv://abduqodirovelbek1991_db_user:FJduHaA1LkVdCfTB@cluster0.uv5kudr.mongodb.net/?appName=Cluster0');
         console.log('Mongo connected');
     }
     catch (error) {
@@ -11,3 +11,4 @@ module.exports =  function () {
         process.exit()
     }
 }
+
